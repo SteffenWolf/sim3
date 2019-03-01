@@ -10,8 +10,14 @@ class Post extends Component {
     }
   }
     render() {
+      const {title, author_id, img, content, username } = this.props
       return(
-        <h1>POST</h1>
+        <div>
+          <p>{this.props.title}</p>
+          <img src={this.props.img} alt="profile"/>
+          <p>{this.props.content}</p>
+          <p> {this.props.author_id} </p>
+        </div>
     )
   }
 }

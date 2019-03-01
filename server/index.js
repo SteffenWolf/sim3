@@ -23,3 +23,9 @@ massive(MASSIVE_CONNECTION).then(db => {
 })
 
 //ENDPOINTS
+app.post('/api/auth/register', ctrl.register);
+app.post('/api/auth/login', ctrl.login);
+app.get('/api/posts', ctrl.allPosts)
+app.post('/auth/logout', ctrl.logout)
+
+app.get('/api/current', ctrl.getUser)
